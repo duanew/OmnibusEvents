@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Omnibus Events</title>
+</head>
+<body>
+<h1>Event List</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Identifier</th>
+        <th>Serial</th>
+        <th>Node</th>
+        <th>Alert Group</th>
+        <th>Alert Key</th>
+        <th>Agent</th>
+        <th>Summary</th>
+        <th>Severity</th>
+        <th>Type</th>
+        <th>Tally</th>
+    </tr>
+    <tr th:each="event : ${events}">
+        <td th:text="${event.id}">123</td>
+        <td th:text="${event.identifier}">Identifier</td>
+        <td th:text="${event.serial}">321</td>
+        <td th:text="${event.node}">Node</td>
+        <td th:text="${event.alert_group}">Alert Group</td>
+        <td th:text="${event.alert_key}">Alert Key</td>
+        <td th:text="${event.agent}">Agent</td>
+        <td th:text="${event.summary}">The event summary</td>
+        <td th:text="${event.severity}">1</td>
+        <td th:text="${event.type}">1</td>
+        <td th:text="${event.tally}">1</td>
+    </tr>
+</table>
+
+</body>
+</html>
